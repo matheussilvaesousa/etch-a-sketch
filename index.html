@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-A-Sketch</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo"><h1>Etch-A-Sketch</h1></div>
+      <div id="nav">
+        <div id="slider-container">
+          <div id="slider-title">Grid size: <span id="slider-value">16</span></label>
+          <input id="slider" type="range" min="4" max="64" value="16" />
+        </div>
+        <div id="color-container">
+          <label for="color">Toggle color mode</label>
+          <input id="color" type="checkbox" name="color" />
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="grid-container"></div>
+    </main>
+  </body>
+</html>
