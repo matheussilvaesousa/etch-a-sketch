@@ -8,10 +8,27 @@ main {
   display: flex;
   justify-content: center;
 }
+.white-squares {
+  background-color: #fff;
+  border: 1px solid #222;
+}
 
-main #grid-container {
-  background-color: #222;
+.black-border {
   border: 5px solid #222;
+}
+
+.gray-squares {
+  background-color: #ddd;
+  border: 1px solid #fff;
+}
+
+.gray-border {
+  border: 5px solid #bbb;
+}
+
+main .grid-container {
+  background-color: #222;
+  border-radius: 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: end;

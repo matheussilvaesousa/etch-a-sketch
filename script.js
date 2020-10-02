@@ -1,4 +1,4 @@
-let grid = document.getElementById("grid-container");
+let grid = document.querySelector(".grid-container");
 let slider = document.getElementById("slider");
 let sliderValue = document.getElementById("slider-value");
 let gridSquare = document.createElement("div");
@@ -9,7 +9,7 @@ let color = document.getElementById("color");
 displayGrid();
 
 slider.addEventListener("input", displaySliderValue);
-slider.addEventListener("change", displayGrid);
+slider.addEventListener("input", displayGrid);
 reset.addEventListener("click", displayGrid);
 color.addEventListener("change", setColor);
 
@@ -23,8 +23,18 @@ function displayGrid() {
 
   gridSquare.style.height = `${100 / gridSize}%`;
   gridSquare.style.width = `${100 / gridSize}%`;
-  gridSquare.style.border = "1px solid #222";
-  gridSquare.style.backgroundColor = "#fff";
+
+  if (color.checked) {
+    grid.classList.remove("black-border");
+    grid.classList.add("gray-border");
+    gridSquare.classList.remove("white-squares");
+    gridSquare.classList.add("gray-squares");
+  } else {
+    grid.classList.remove("gray-border");
+    grid.classList.add("black-border");
+    gridSquare.classList.remove("gray-squares");
+    gridSquare.classList.add("white-squares");
+  }
 
   for (let i = 0; i < gridSize; i++) {
     for (let j = 0; j < gridSize; j++) {
