@@ -11,6 +11,7 @@ displayGrid();
 slider.addEventListener("input", displaySliderValue);
 slider.addEventListener("input", displayGrid);
 reset.addEventListener("click", displayGrid);
+color.addEventListener("click", displayGrid);
 color.addEventListener("change", setColor);
 
 function displaySliderValue() {
